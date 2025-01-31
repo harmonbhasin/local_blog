@@ -1,0 +1,12 @@
+project:
+  output-dir: docs
+
+toc: true
+
+execute:
+  freeze: true
+
+format:
+  html:
+    theme: default
+    html-math-method: katex
