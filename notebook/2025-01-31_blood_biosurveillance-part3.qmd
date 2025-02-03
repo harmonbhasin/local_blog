@@ -39,8 +39,8 @@ We sought MGS data to characterize the blood virome of healthy donor populations
 | Study | Sample type | Country† | Donor description | Samples (Contributing individuals) | Total read pairs (Avg. per sample) | Sample prep optimization for viruses? | Nucleic acid sequenced | Read type |
 |:-------|:-------|:-------|:-------|:-------|:-------|:-------|:-------|:-------|
 | Cebriá-Mendoza et al. (3) | Plasma | Spain | Healthy | 60 (587) | 230M (3.8M) | Yes | DNA+RNA | 2x150 bp |
-| Thijssen et al. (4) | Plasma | Iran | Healthy | 21 (100) | 116M(5.6M) | Yes | DNA+RNA | 2x150 bp |
-| Mengyi et al. (5) | Plasma | China | Healthy | 201 (≤10,720††) | 3.4B(17.1M) | No | DNA | 2x150 bp |
+| Thijssen et al. (4) | Plasma | Iran | Healthy | 21 (100) | 116M (5.6M) | Yes | DNA+RNA | 2x150 bp |
+| Mengyi et al. (5) | Plasma | China | Healthy | 201 (≤10,720††) | 3.4B (17.1M) | No | DNA | 2x150 bp |
 | Aydillo et al. (6) | Whole blood | USA | Healthy | 53 | 1.7B (32.8M) | No | RNA | 2x100 bp |
 | O’Connell (7) | Whole blood | USA | Emergency room patients with chronic health condition | 138 | 3.1B (22.5M) | No | RNA | 2x150 bp |
 | Thompson et al. (8) | Whole blood | USA | Hospitalized COVID-19 patients and healthy controls[^2] | 417 | 27.7B (66.4M) | No | RNA | 2x100 bp |
@@ -134,59 +134,59 @@ Our work has shown that blood captures a considerable diversity of human-infecti
 
 # References
 
-1\. Moustafa A, Xie C, Kirkness E, Biggs W, Wong E, Turpaz Y, et al. The blood DNA virome in 8,000 humans. PLoS Pathog \[Internet\]. 2017 Mar 22;13(3):e1006292. https://doi.org/10.1371/journal.ppat.1006292
+1\. Moustafa A, Xie C, Kirkness E, Biggs W, Wong E, Turpaz Y, et al. The blood DNA virome in 8,000 humans. PLoS Pathog \[Internet\]. 2017 Mar 22;13(3):e1006292. [https://doi.org/10.1371/journal.ppat.1006292](https://doi.org/10.1371/journal.ppat.1006292)
 
-2\. Tan CCS, Ko KKK, Chen H, Liu J, Loh M, Chia M, et al. No evidence for a common blood microbiome based on a population study of 9,770 healthy humans. Nature Microbiology \[Internet\]. 2023 May;8(5):973–85. https://doi.org/10.1038/s41564-023-01350-w
+2\. Tan CCS, Ko KKK, Chen H, Liu J, Loh M, Chia M, et al. No evidence for a common blood microbiome based on a population study of 9,770 healthy humans. Nature Microbiology \[Internet\]. 2023 May;8(5):973–85. [https://doi.org/10.1038/s41564-023-01350-w](https://doi.org/10.1038/s41564-023-01350-w)
 
-3\. Cebriá-Mendoza M, Bracho MA, Arbona C, Larrea L, Díaz W, Sanjuán R, et al. Exploring the Diversity of the Human Blood Virome. Viruses \[Internet\]. 2021 Nov 21;13(11). https://doi.org/10.3390/v13112322
+3\. Cebriá-Mendoza M, Bracho MA, Arbona C, Larrea L, Díaz W, Sanjuán R, et al. Exploring the Diversity of the Human Blood Virome. Viruses \[Internet\]. 2021 Nov 21;13(11). [https://doi.org/10.3390/v13112322](https://doi.org/10.3390/v13112322)
 
-4\. Thijssen M, Khamisipour G, Maleki M, Devos T, Li G, Van Ranst M, et al. Characterization of the Human Blood Virome in Iranian Multiple Transfused Patients. Viruses \[Internet\]. 2023 Jun 23;15(7). https://doi.org/10.3390/v15071425
+4\. Thijssen M, Khamisipour G, Maleki M, Devos T, Li G, Van Ranst M, et al. Characterization of the Human Blood Virome in Iranian Multiple Transfused Patients. Viruses \[Internet\]. 2023 Jun 23;15(7). [https://doi.org/10.3390/v15071425](https://doi.org/10.3390/v15071425)
 
-5\. Mengyi Z, Yuhui L, Zhan G, Anqing L, Yujia L, Shilin L, et al. Plasma metagenomics reveals regional variations of emerging and re-emerging pathogens in Chinese blood donors with an emphasis on human parvovirus B19. One Health \[Internet\]. 2023 Dec;17:100602. https://doi.org/10.1016/j.onehlt.2023.100602
+5\. Mengyi Z, Yuhui L, Zhan G, Anqing L, Yujia L, Shilin L, et al. Plasma metagenomics reveals regional variations of emerging and re-emerging pathogens in Chinese blood donors with an emphasis on human parvovirus B19. One Health \[Internet\]. 2023 Dec;17:100602. [https://doi.org/10.1016/j.onehlt.2023.100602](https://doi.org/10.1016/j.onehlt.2023.100602)
 
-6\. Aydillo T, Gonzalez-Reiche AS, Stadlbauer D, Amper MA, Nair VD, Mariottini C, et al. Transcriptome signatures preceding the induction of anti-stalk antibodies elicited after universal influenza vaccination. NPJ Vaccines \[Internet\]. 2022 Dec 10 \[cited 2024 Oct 9\];7(1):160. https://doi.org/10.1038/s41541-022-00583-w
+6\. Aydillo T, Gonzalez-Reiche AS, Stadlbauer D, Amper MA, Nair VD, Mariottini C, et al. Transcriptome signatures preceding the induction of anti-stalk antibodies elicited after universal influenza vaccination. NPJ Vaccines \[Internet\]. 2022 Dec 10 \[cited 2024 Oct 9\];7(1):160. [https://doi.org/10.1038/s41541-022-00583-w](https://doi.org/10.1038/s41541-022-00583-w)
 
-7\. O’Connell GC. Dataset including whole blood gene expression profiles and matched leukocyte counts with utility for benchmarking cellular deconvolution pipelines. BMC Genom Data \[Internet\]. 2024 May 7 \[cited 2024 Oct 9\];25(1):45. https://doi.org/10.1186/s12863-024-01223-z
+7\. O’Connell GC. Dataset including whole blood gene expression profiles and matched leukocyte counts with utility for benchmarking cellular deconvolution pipelines. BMC Genom Data \[Internet\]. 2024 May 7 \[cited 2024 Oct 9\];25(1):45. [https://doi.org/10.1186/s12863-024-01223-z](https://doi.org/10.1186/s12863-024-01223-z)
 
-8\. Thompson RC, Simons NW, Wilkins L, Cheng E, Del Valle DM, Hoffman GE, et al. Molecular states during acute COVID-19 reveal distinct etiologies of long-term sequelae. Nat Med \[Internet\]. 2023 Jan \[cited 2024 Oct 9\];29(1):236–46. https://doi.org/10.1038/s41591-022-02107-4
+8\. Thompson RC, Simons NW, Wilkins L, Cheng E, Del Valle DM, Hoffman GE, et al. Molecular states during acute COVID-19 reveal distinct etiologies of long-term sequelae. Nat Med \[Internet\]. 2023 Jan \[cited 2024 Oct 9\];29(1):236–46. [https://doi.org/10.1038/s41591-022-02107-4](https://doi.org/10.1038/s41591-022-02107-4)
 
-9\. Flurin L, Wolf MJ, Fisher CR, Cano Cevallos EJ, Vaillant JJ, Pritt BS, et al. Pathogen Detection in Infective Endocarditis Using Targeted Metagenomics on Whole Blood and Plasma: a Prospective Pilot Study. Simner PJ, editor. J Clin Microbiol \[Internet\]. 2022 Sep 21;60(9). https://doi.org/10.1128/jcm.00621-22
+9\. Flurin L, Wolf MJ, Fisher CR, Cano Cevallos EJ, Vaillant JJ, Pritt BS, et al. Pathogen Detection in Infective Endocarditis Using Targeted Metagenomics on Whole Blood and Plasma: a Prospective Pilot Study. Simner PJ, editor. J Clin Microbiol \[Internet\]. 2022 Sep 21;60(9). [https://doi.org/10.1128/jcm.00621-22](https://doi.org/10.1128/jcm.00621-22)
 
-10\. Lau P, Cordey S, Brito F, Tirefort D, Petty TJ, Turin L, et al. Metagenomics analysis of red blood cell and fresh-frozen plasma units. Transfusion \[Internet\]. 2017 Jul;57(7):1787–800. https://doi.org/10.1111/trf.14148
+10\. Lau P, Cordey S, Brito F, Tirefort D, Petty TJ, Turin L, et al. Metagenomics analysis of red blood cell and fresh-frozen plasma units. Transfusion \[Internet\]. 2017 Jul;57(7):1787–800. [https://doi.org/10.1111/trf.14148](https://doi.org/10.1111/trf.14148)
 
-11\. Wang D, Zhang Z, Shen H, Jin F, Liang J, Shen D, et al. Comparison of plasma and blood cell samples in metagenomic next-generation sequencing for identification of the causative pathogens of fever. Heliyon \[Internet\]. 2024 Jun;10(11):e31677. https://doi.org/10.1016/j.heliyon.2024.e31677
+11\. Wang D, Zhang Z, Shen H, Jin F, Liang J, Shen D, et al. Comparison of plasma and blood cell samples in metagenomic next-generation sequencing for identification of the causative pathogens of fever. Heliyon \[Internet\]. 2024 Jun;10(11):e31677. [https://doi.org/10.1016/j.heliyon.2024.e31677](https://doi.org/10.1016/j.heliyon.2024.e31677)
 
-12\. Wu C, Yu X, Gai W, Liu Y, Qi Y, Zheng Y, et al. Diagnostic value of plasma and blood cells metagenomic next-generation sequencing in patients with sepsis. Biochem Biophys Res Commun \[Internet\]. 2023 Nov 26;683(149079):149079. https://doi.org/10.1016/j.bbrc.2023.10.011
+12\. Wu C, Yu X, Gai W, Liu Y, Qi Y, Zheng Y, et al. Diagnostic value of plasma and blood cells metagenomic next-generation sequencing in patients with sepsis. Biochem Biophys Res Commun \[Internet\]. 2023 Nov 26;683(149079):149079. [https://doi.org/10.1016/j.bbrc.2023.10.011](https://doi.org/10.1016/j.bbrc.2023.10.011)
 
-13\. Grimm SL, Kaufman JT, Rice DP, Whittaker C, Bradshaw WJ, McLaren MR. Inferring the sensitivity of wastewater metagenomic sequencing for pathogen early detection \[Internet\]. bioRxiv. 2023. https://doi.org/10.1101/2023.12.22.23300450
+13\. Grimm SL, Kaufman JT, Rice DP, Whittaker C, Bradshaw WJ, McLaren MR. Inferring the sensitivity of wastewater metagenomic sequencing for pathogen early detection \[Internet\]. bioRxiv. 2023. [https://doi.org/10.1101/2023.12.22.23300450](https://doi.org/10.1101/2023.12.22.23300450)
 
-14\. Castillo DJ, Rifkin RF, Cowan DA, Potgieter M. The Healthy Human Blood Microbiome: Fact or Fiction? Front Cell Infect Microbiol \[Internet\]. 2019;9. https://doi.org/10.3389/fcimb.2019.00148
+14\. Castillo DJ, Rifkin RF, Cowan DA, Potgieter M. The Healthy Human Blood Microbiome: Fact or Fiction? Front Cell Infect Microbiol \[Internet\]. 2019;9. [https://doi.org/10.3389/fcimb.2019.00148](https://doi.org/10.3389/fcimb.2019.00148)
 
-15\. Spandole S, Cimponeriu D, Berca LM, Mihăescu G. Human anelloviruses: an update of molecular, epidemiological and clinical aspects. Arch Virol \[Internet\]. 2015 Apr 15 \[cited 2025 Jan 8\];160(4):893–908. https://doi.org/10.1007/s00705-015-2363-9
+15\. Spandole S, Cimponeriu D, Berca LM, Mihăescu G. Human anelloviruses: an update of molecular, epidemiological and clinical aspects. Arch Virol \[Internet\]. 2015 Apr 15 \[cited 2025 Jan 8\];160(4):893–908. [https://doi.org/10.1007/s00705-015-2363-9](https://doi.org/10.1007/s00705-015-2363-9)
 
-16\. Sabbaghian M, Gheitasi H, Shekarchi AA, Tavakoli A, Poortahmasebi V. The mysterious anelloviruses: investigating its role in human diseases. BMC Microbiol \[Internet\]. 2024 Jan 29 \[cited 2025 Jan 8\];24(1):40. https://doi.org/10.1186/s12866-024-03187-7
+16\. Sabbaghian M, Gheitasi H, Shekarchi AA, Tavakoli A, Poortahmasebi V. The mysterious anelloviruses: investigating its role in human diseases. BMC Microbiol \[Internet\]. 2024 Jan 29 \[cited 2025 Jan 8\];24(1):40. [https://doi.org/10.1186/s12866-024-03187-7](https://doi.org/10.1186/s12866-024-03187-7)
 
-17\. Timmerman AL, Schönert ALM, van der Hoek L. Anelloviruses versus human immunity: how do we control these viruses? FEMS Microbiol Rev \[Internet\]. 2024 Jan 12 \[cited 2025 Jan 8\];48(1):fuae005. https://doi.org/10.1093/femsre/fuae005
+17\. Timmerman AL, Schönert ALM, van der Hoek L. Anelloviruses versus human immunity: how do we control these viruses? FEMS Microbiol Rev \[Internet\]. 2024 Jan 12 \[cited 2025 Jan 8\];48(1):fuae005. [https://doi.org/10.1093/femsre/fuae005](https://doi.org/10.1093/femsre/fuae005)
 
-18\. Dunmire SK, Verghese PS, Balfour HH Jr. Primary Epstein-Barr virus infection. J Clin Virol \[Internet\]. 2018 May 1 \[cited 2025 Jan 8\];102:84–92. https://doi.org/10.1016/j.jcv.2018.03.001
+18\. Dunmire SK, Verghese PS, Balfour HH Jr. Primary Epstein-Barr virus infection. J Clin Virol \[Internet\]. 2018 May 1 \[cited 2025 Jan 8\];102:84–92. [https://doi.org/10.1016/j.jcv.2018.03.001](https://doi.org/10.1016/j.jcv.2018.03.001)
 
-19\. Cannon MJ, Schmid DS, Hyde TB. Review of cytomegalovirus seroprevalence and demographic characteristics associated with infection: CMV seroprevalence. Rev Med Virol \[Internet\]. 2010 Jul 1 \[cited 2025 Jan 8\];20(4):202–13. https://doi.org/10.1002/rmv.655 
+19\. Cannon MJ, Schmid DS, Hyde TB. Review of cytomegalovirus seroprevalence and demographic characteristics associated with infection: CMV seroprevalence. Rev Med Virol \[Internet\]. 2010 Jul 1 \[cited 2025 Jan 8\];20(4):202–13. [https://doi.org/10.1002/rmv.655](https://doi.org/10.1002/rmv.655)
 
-20\. Bodaghi S, Wood LV, Roby G, Ryder C, Steinberg SM, Zheng ZM. Could human papillomaviruses be spread through blood? J Clin Microbiol \[Internet\]. 2005 Nov \[cited 2025 Jan 7\];43(11):5428–34. https://doi.org/10.1128/JCM.43.11.5428-5434.2005
+20\. Bodaghi S, Wood LV, Roby G, Ryder C, Steinberg SM, Zheng ZM. Could human papillomaviruses be spread through blood? J Clin Microbiol \[Internet\]. 2005 Nov \[cited 2025 Jan 7\];43(11):5428–34. [https://doi.org/10.1128/JCM.43.11.5428-5434.2005](https://doi.org/10.1128/JCM.43.11.5428-5434.2005)
 
-21\. Cladel NM, Jiang P, Li JJ, Peng X, Cooper TK, Majerciak V, et al. Papillomavirus can be transmitted through the blood and produce infections in blood recipients: Evidence from two animal models. Emerg Microbes Infect \[Internet\]. 2019 Jul 25 \[cited 2025 Jan 7\];8(1):1108–21. https://doi.org/10.1080/22221751.2019.1637072
+21\. Cladel NM, Jiang P, Li JJ, Peng X, Cooper TK, Majerciak V, et al. Papillomavirus can be transmitted through the blood and produce infections in blood recipients: Evidence from two animal models. Emerg Microbes Infect \[Internet\]. 2019 Jul 25 \[cited 2025 Jan 7\];8(1):1108–21. [https://doi.org/10.1080/22221751.2019.1637072](https://doi.org/10.1080/22221751.2019.1637072)
 
-22\. Boothpur R, Brennan DC. Human polyoma viruses and disease with emphasis on clinical BK and JC. J Clin Virol \[Internet\]. 2010 Apr 8 \[cited 2025 Jan 7\];47(4):306–12. https://doi.org/10.1016/j.jcv.2009.12.006
+22\. Boothpur R, Brennan DC. Human polyoma viruses and disease with emphasis on clinical BK and JC. J Clin Virol \[Internet\]. 2010 Apr 8 \[cited 2025 Jan 7\];47(4):306–12. [https://doi.org/10.1016/j.jcv.2009.12.006](https://doi.org/10.1016/j.jcv.2009.12.006)
 
-23\. De Gascun CF, Carr MJ. Human polyomavirus reactivation: disease pathogenesis and treatment approaches. Clin Dev Immunol \[Internet\]. 2013 May 2 \[cited 2025 Jan 7\];2013:373579. https://doi.org/10.1155/2013/373579
+23\. De Gascun CF, Carr MJ. Human polyomavirus reactivation: disease pathogenesis and treatment approaches. Clin Dev Immunol \[Internet\]. 2013 May 2 \[cited 2025 Jan 7\];2013:373579. [https://doi.org/10.1155/2013/373579](https://doi.org/10.1155/2013/373579)
 
-24\. Yang N, Dai R, Zhang X. Global prevalence of human pegivirus-1 in healthy volunteer blood donors: a systematic review and meta-analysis. Vox Sang \[Internet\]. 2020 Apr 1 \[cited 2025 Jan 8\];115(3):107–19. https://doi.org/10.1111/vox.12876
+24\. Yang N, Dai R, Zhang X. Global prevalence of human pegivirus-1 in healthy volunteer blood donors: a systematic review and meta-analysis. Vox Sang \[Internet\]. 2020 Apr 1 \[cited 2025 Jan 8\];115(3):107–19. [https://doi.org/10.1111/vox.12876](https://doi.org/10.1111/vox.12876)
 
-25\. Hayden RT, Wolk DM, Carroll KC, Tang YW. Adenovirus. In: Diagnostic Microbiology of the Immunocompromised Host, Second Edition \[Internet\]. American Society of Microbiology; 2016 \[cited 2025 Jan 9\]. p. 217–32. https://doi.org/10.1128/microbiolspec.dmih2-0020-2015
+25\. Hayden RT, Wolk DM, Carroll KC, Tang YW. Adenovirus. In: Diagnostic Microbiology of the Immunocompromised Host, Second Edition \[Internet\]. American Society of Microbiology; 2016 \[cited 2025 Jan 9\]. p. 217–32. [https://doi.org/10.1128/microbiolspec.dmih2-0020-2015](https://doi.org/10.1128/microbiolspec.dmih2-0020-2015)
 
-26\. Cohen JI. Herpesvirus latency. J Clin Invest \[Internet\]. 2020 Jul 1 \[cited 2025 Jan 6\];130(7):3361–9. https://doi.org/10.1172/JCI136225
+26\. Cohen JI. Herpesvirus latency. J Clin Invest \[Internet\]. 2020 Jul 1 \[cited 2025 Jan 6\];130(7):3361–9. [https://doi.org/10.1172/JCI136225](https://doi.org/10.1172/JCI136225)
 
-27\. Griffiths P, Reeves M. Pathogenesis of human cytomegalovirus in the immunocompromised host. Nat Rev Microbiol \[Internet\]. 2021 Dec 24 \[cited 2024 Jul 2\];19(12):759–73. https://doi.org/10.1038/s41579-021-00582-z
+27\. Griffiths P, Reeves M. Pathogenesis of human cytomegalovirus in the immunocompromised host. Nat Rev Microbiol \[Internet\]. 2021 Dec 24 \[cited 2024 Jul 2\];19(12):759–73. [https://doi.org/10.1038/s41579-021-00582-z](https://doi.org/10.1038/s41579-021-00582-z)
 
 # Appendix 1: Dataset descriptions {#appendix-1:-dataset-descriptions}
 
