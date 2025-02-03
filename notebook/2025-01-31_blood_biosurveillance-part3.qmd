@@ -4,7 +4,7 @@ author:
   - Harmon Bhasin
   - Michael McLaren
   - Lennart Justen
-date: 2025-01-31
+date: 2025-02-03
 toc: true
 format:
  html:
@@ -65,7 +65,7 @@ We processed all datasets through a modified version of the viral metagenomic se
 
 The pipeline consists of two workflows: the taxonomic profiling workflow and the viral identification workflow. The taxonomic profiling workflow uses Kraken2 to assign reads to the least common ancestor (based on NCBI taxonomy) of matched genomes in the Kraken2 Standard database, which includes RefSeq prokaryotic, viral, and vector genomes along with the human genome. Results from this workflow determine the kingdom-level composition shown in Table 1\. Since the database lacks non-human eukaryotic reference genomes, reads from such organisms are expected to remain unassigned.
 
-The viral-identification workflow maps reads with Kraken2 (also with the Standard database) and aligns reads using Bowtie2 to an expanded database of human-infecting virus genomes from GenBank, reporting putative human-infecting virus reads based on the condition that the read aligns by Bowtie2 to a human virus and is not mapped by Kraken2 to a taxon that is not a human virus. We use the Kraken2 (least common ancestor) assignment as the taxonomic assignment of a read; doing so excludes a large fraction of putative human-infecting virus reads which were not assigned by Kraken2.[^3]
+The viral-identification workflow maps reads with Kraken2 (also with the Standard database) and aligns reads using Bowtie2 to an expanded database of human-infecting virus genomes from GenBank, reporting putative human-infecting virus reads based on the condition that the read aligns by Bowtie2 to a human virus and is not mapped by Kraken2 to a taxon that is not a human virus. We use the Bowtie2 assignment as the taxonomic assignment of a read.[^3]
 
 We applied additional filtering to taxonomic assignments in our downstream analysis. First, we removed reads from the Cebrià-Mendoza et al. (3) dataset that Kraken2 assigned to *Microviridae* or *Rhabdoviridae* families, which originated from Phi-X and Vesicular Stomatitis Virus spike-in controls. Second, we removed SARS-CoV-2 reads from the Thijssen et al. (4) and Mengyi et al. (5), as these were likely laboratory contaminants given that samples were collected before the COVID-19 pandemic (2012-2018).
 
@@ -94,7 +94,7 @@ The kingdom-level composition indicates that both sample type and sample process
 
 ![hv-dataset](/img/2025-01-31_figure1.png) **Figure 1**: Distribution of human-infecting virus relative abundance across all samples in six studies. Each point represents a single sample. Boxplots show the distribution including samples with zero HV reads (box: 25th-75th percentiles, line: median, whiskers: extend to 1.5× interquartile range). For studies with many zeros, the median and potentially the entire boxplot may collapse to zero. Numbers underneath the study names denote the percentage of samples with at least one HV read.
 
-Total human-infecting virus (HV) RA differed markedly between studies (Figure 1) in a manner consistent with the kingdom-level composition. Datasets that had lower human RA tended to have more samples with HV reads and higher total-HV RA in those samples. Whole blood samples generally showed low HV RA, with a maximum of 1.35×10-4 across all samples and with the majority of samples in each dataset containing no HV reads. Plasma samples showed higher RA, with median values ranging from 10-6 to 10-2 across studies and only a small fraction of samples containing no HV reads. Cebriá-Mendoza et al. (3) had the highest median RA of 6.06×10-3 consistent with their success in removing human nucleic acids during sample processing.
+Total human-infecting virus (HV) RA differed markedly between studies (Figure 1) in a manner consistent with the kingdom-level composition. Datasets that had lower human RA tended to have more samples with HV reads and higher total-HV RA in those samples. Whole blood samples generally showed low HV RA, with a maximum of 1.35×10^(-4) across all samples and with the majority of samples in each dataset containing no HV reads. Plasma samples showed higher RA, with median values ranging from 10^(-6) to 10^(-2) across studies and only a small fraction of samples containing no HV reads. Cebriá-Mendoza et al. (3) had the highest median RA of 6.06×10^(-3) consistent with their success in removing human nucleic acids during sample processing.
 
 Across datasets, the presence and RA of total HVs increased inversely to the fraction of human reads in the dataset, suggesting that presence and RA of HVs is driven by the ability for a given sample type and processing protocol to yield non-human reads. The higher proportion of samples with HV reads in plasma datasets also likely reflects the use of pooled samples, which increases the chance that an HV will be present in the sample.
 
@@ -104,9 +104,9 @@ To understand the viral composition across datasets, we analyzed which virus fam
 
 ![hv-ra-prev](/img/2025-01-31_figure3.png) **Figure 3**: Detection of human-infecting virus (HV) families across whole blood and plasma datasets, including only families found in at least five samples. Left panel: Prevalence of each viral family, shown as the percentage of samples containing at least one viral read. Right panel: Relative abundance of viral families in positive samples.
 
-Our analysis identified 16 human virus (HV) families across all datasets, with 10 families detected in at least five samples (Figure 3). The relative abundance (RA) of detected viruses varied widely, ranging from 10-8 to 10-1. Whole blood samples generally showed lower non-zero RA values, partly due to their greater sequencing depth (Table 1) which enables detection of rarer sequences.
+Our analysis identified 16 human virus (HV) families across all datasets, with 10 families detected in at least five samples (Figure 3). The relative abundance (RA) of detected viruses varied widely, ranging from 10^(-8) to 10^(-1). Whole blood samples generally showed lower non-zero RA values, partly due to their greater sequencing depth (Table 1) which enables detection of rarer sequences.
 
-*​​Anelloviridae* emerged as the most consistently detected family, appearing in five of six datasets with particularly high prevalence (\>75%) in plasma samples. Their relative abundance showed substantial variation, spanning up to three orders of magnitude within individual datasets. This high prevalence aligns with current understanding—Anelloviruses are nearly ubiquitous in humans, maintain persistent replication in T lymphocytes, and produce an estimated 1010 virions daily (15–17).
+*​​Anelloviridae* emerged as the most consistently detected family, appearing in five of six datasets with particularly high prevalence (\>75%) in plasma samples. Their relative abundance showed substantial variation, spanning up to three orders of magnitude within individual datasets. This high prevalence aligns with current understanding—Anelloviruses are nearly ubiquitous in humans, maintain persistent replication in T lymphocytes, and produce an estimated 10^(10) virions daily (15–17).
 
 We detected several viral families known to establish persistent infections in humans. [*Retroviridae*](https://en.wikipedia.org/wiki/Retrovirus) and [*Orthoherpesviridae*](https://en.wikipedia.org/wiki/Herpesviridae) were found across multiple datasets, consistent with their high prevalence in human populations. The detected *Orthoherpesviridae* genera ([Appendix 2](#appendix-2:-human-infecting-virus-genera)) correspond to common herpesviruses such as HSV-1/2, Epstein-Barr virus (EBV; infecting \~90% of adults worldwide), and human cytomegalovirus (HCMV; \~80% prevalence) (18,19). Within *Retroviridae*, we identified sequences from the *Lentivirus* genus, which includes HIV.
 
@@ -128,67 +128,65 @@ Our reanalysis of six publicly available MGS datasets provides new insights into
 
 The detected viruses align well with known epidemiology of blood-borne and latent viral infections, suggesting MGS of blood and plasma can reliably detect an important subset of human-infecting viruses. However, common respiratory and gastrointestinal viruses were notably absent from samples from healthy donors, indicating that blood-based surveillance may be most effective as part of a complementary system incorporating other sample types like respiratory swabs and wastewater.
 
-Several limitations of our analysis suggest directions for future work. Contamination is a significant concern in metagenomic sequencing studies, as outside nucleic acid can be introduced during sample collection, processing, and library preparation, altering the taxonomic profile and potentially leading to false positive detections. A more rigorous analysis of potential contamination, including examining control samples and systematic removal of laboratory contaminants, would strengthen confidence in our viral detections. Additionally, our ability to causally assign the differences in viral presence and abundance to sample type and viral enrichment is limited by the differences among studies in donor population and other differences in sample processing and sequencing methods. Statistical modeling that accounts for both sequencing depth and expected viral prevalence in donor populations could provide estimates of detection sensitivity for a given cost or amount of sequencing (28). However, obtaining accurate estimates of viral prevalence is challenging. Studies directly comparing whole blood and plasma fractions from the same individuals using the same sequencing method would enable more definitive conclusions about sample type differences, as they would allow us to eliminate variation in viral prevalence and sequencing protocol.
+Several limitations of our analysis suggest directions for future work. Contamination is a significant concern in metagenomic sequencing studies, as outside nucleic acid can be introduced during sample collection, processing, and library preparation, altering the taxonomic profile and potentially leading to false positive detections. A more rigorous analysis of potential contamination, including examining control samples and systematic removal of laboratory contaminants, would strengthen confidence in our viral detections. Additionally, our ability to causally assign the differences in viral presence and abundance to sample type and viral enrichment is limited by the differences among studies in donor population and other differences in sample processing and sequencing methods. Statistical modeling that accounts for both sequencing depth and expected viral prevalence in donor populations could provide estimates of detection sensitivity for a given cost or amount of sequencing (13). However, obtaining accurate estimates of viral prevalence is challenging. Studies directly comparing whole blood and plasma fractions from the same individuals using the same sequencing method would enable more definitive conclusions about sample type differences, as they would allow us to eliminate variation in viral prevalence and sequencing protocol.
 
 Our work has shown that blood captures a considerable diversity of human-infecting viruses and that sample type and processing methods greatly impact viral relative abundance. The results suggest that if the sample collection and processing was optimized, blood could provide sensitive detection of pathogens not readily detectable in wastewater or nasal swabs. Overall, we’re excited about the role that blood-based biosurveillance could play in our broader early detection network and are interested in hearing about potential partners in this space.
 
 # References
 
-1\. Moustafa A, Xie C, Kirkness E, Biggs W, Wong E, Turpaz Y, et al. The blood DNA virome in 8,000 humans. PLoS Pathog \[Internet\]. 2017 Mar 22;13(3):e1006292. 
+1\. Moustafa A, Xie C, Kirkness E, Biggs W, Wong E, Turpaz Y, et al. The blood DNA virome in 8,000 humans. PLoS Pathog \[Internet\]. 2017 Mar 22;13(3):e1006292. https://doi.org/10.1371/journal.ppat.1006292
 
-2\. Tan CCS, Ko KKK, Chen H, Liu J, Loh M, Chia M, et al. No evidence for a common blood microbiome based on a population study of 9,770 healthy humans. Nature Microbiology \[Internet\]. 2023 May;8(5):973–85. 
+2\. Tan CCS, Ko KKK, Chen H, Liu J, Loh M, Chia M, et al. No evidence for a common blood microbiome based on a population study of 9,770 healthy humans. Nature Microbiology \[Internet\]. 2023 May;8(5):973–85. https://doi.org/10.1038/s41564-023-01350-w
 
-3\. Cebriá-Mendoza M, Bracho MA, Arbona C, Larrea L, Díaz W, Sanjuán R, et al. Exploring the Diversity of the Human Blood Virome. Viruses \[Internet\]. 2021 Nov 21;13(11). 
+3\. Cebriá-Mendoza M, Bracho MA, Arbona C, Larrea L, Díaz W, Sanjuán R, et al. Exploring the Diversity of the Human Blood Virome. Viruses \[Internet\]. 2021 Nov 21;13(11). https://doi.org/10.3390/v13112322
 
-4\. Thijssen M, Khamisipour G, Maleki M, Devos T, Li G, Van Ranst M, et al. Characterization of the Human Blood Virome in Iranian Multiple Transfused Patients. Viruses \[Internet\]. 2023 Jun 23;15(7). 
+4\. Thijssen M, Khamisipour G, Maleki M, Devos T, Li G, Van Ranst M, et al. Characterization of the Human Blood Virome in Iranian Multiple Transfused Patients. Viruses \[Internet\]. 2023 Jun 23;15(7). https://doi.org/10.3390/v15071425
 
-5\. Mengyi Z, Yuhui L, Zhan G, Anqing L, Yujia L, Shilin L, et al. Plasma metagenomics reveals regional variations of emerging and re-emerging pathogens in Chinese blood donors with an emphasis on human parvovirus B19. One Health \[Internet\]. 2023 Dec;17:100602. 
+5\. Mengyi Z, Yuhui L, Zhan G, Anqing L, Yujia L, Shilin L, et al. Plasma metagenomics reveals regional variations of emerging and re-emerging pathogens in Chinese blood donors with an emphasis on human parvovirus B19. One Health \[Internet\]. 2023 Dec;17:100602. https://doi.org/10.1016/j.onehlt.2023.100602
 
-6\. Aydillo T, Gonzalez-Reiche AS, Stadlbauer D, Amper MA, Nair VD, Mariottini C, et al. Transcriptome signatures preceding the induction of anti-stalk antibodies elicited after universal influenza vaccination. NPJ Vaccines \[Internet\]. 2022 Dec 10 \[cited 2024 Oct 9\];7(1):160. 
+6\. Aydillo T, Gonzalez-Reiche AS, Stadlbauer D, Amper MA, Nair VD, Mariottini C, et al. Transcriptome signatures preceding the induction of anti-stalk antibodies elicited after universal influenza vaccination. NPJ Vaccines \[Internet\]. 2022 Dec 10 \[cited 2024 Oct 9\];7(1):160. https://doi.org/10.1038/s41541-022-00583-w
 
-7\. O’Connell GC. Dataset including whole blood gene expression profiles and matched leukocyte counts with utility for benchmarking cellular deconvolution pipelines. BMC Genom Data \[Internet\]. 2024 May 7 \[cited 2024 Oct 9\];25(1):45. 
+7\. O’Connell GC. Dataset including whole blood gene expression profiles and matched leukocyte counts with utility for benchmarking cellular deconvolution pipelines. BMC Genom Data \[Internet\]. 2024 May 7 \[cited 2024 Oct 9\];25(1):45. https://doi.org/10.1186/s12863-024-01223-z
 
-8\. Thompson RC, Simons NW, Wilkins L, Cheng E, Del Valle DM, Hoffman GE, et al. Molecular states during acute COVID-19 reveal distinct etiologies of long-term sequelae. Nat Med \[Internet\]. 2023 Jan \[cited 2024 Oct 9\];29(1):236–46. 
+8\. Thompson RC, Simons NW, Wilkins L, Cheng E, Del Valle DM, Hoffman GE, et al. Molecular states during acute COVID-19 reveal distinct etiologies of long-term sequelae. Nat Med \[Internet\]. 2023 Jan \[cited 2024 Oct 9\];29(1):236–46. https://doi.org/10.1038/s41591-022-02107-4
 
-9\. Flurin L, Wolf MJ, Fisher CR, Cano Cevallos EJ, Vaillant JJ, Pritt BS, et al. Pathogen Detection in Infective Endocarditis Using Targeted Metagenomics on Whole Blood and Plasma: a Prospective Pilot Study. Simner PJ, editor. J Clin Microbiol \[Internet\]. 2022 Sep 21;60(9). 
+9\. Flurin L, Wolf MJ, Fisher CR, Cano Cevallos EJ, Vaillant JJ, Pritt BS, et al. Pathogen Detection in Infective Endocarditis Using Targeted Metagenomics on Whole Blood and Plasma: a Prospective Pilot Study. Simner PJ, editor. J Clin Microbiol \[Internet\]. 2022 Sep 21;60(9). https://doi.org/10.1128/jcm.00621-22
 
-10\. Lau P, Cordey S, Brito F, Tirefort D, Petty TJ, Turin L, et al. Metagenomics analysis of red blood cell and fresh-frozen plasma units. Transfusion \[Internet\]. 2017 Jul;57(7):1787–800. 
+10\. Lau P, Cordey S, Brito F, Tirefort D, Petty TJ, Turin L, et al. Metagenomics analysis of red blood cell and fresh-frozen plasma units. Transfusion \[Internet\]. 2017 Jul;57(7):1787–800. https://doi.org/10.1111/trf.14148
 
-11\. Wang D, Zhang Z, Shen H, Jin F, Liang J, Shen D, et al. Comparison of plasma and blood cell samples in metagenomic next-generation sequencing for identification of the causative pathogens of fever. Heliyon \[Internet\]. 2024 Jun;10(11):e31677. 
+11\. Wang D, Zhang Z, Shen H, Jin F, Liang J, Shen D, et al. Comparison of plasma and blood cell samples in metagenomic next-generation sequencing for identification of the causative pathogens of fever. Heliyon \[Internet\]. 2024 Jun;10(11):e31677. https://doi.org/10.1016/j.heliyon.2024.e31677
 
-12\. Wu C, Yu X, Gai W, Liu Y, Qi Y, Zheng Y, et al. Diagnostic value of plasma and blood cells metagenomic next-generation sequencing in patients with sepsis. Biochem Biophys Res Commun \[Internet\]. 2023 Nov 26;683(149079):149079. 
+12\. Wu C, Yu X, Gai W, Liu Y, Qi Y, Zheng Y, et al. Diagnostic value of plasma and blood cells metagenomic next-generation sequencing in patients with sepsis. Biochem Biophys Res Commun \[Internet\]. 2023 Nov 26;683(149079):149079. https://doi.org/10.1016/j.bbrc.2023.10.011
 
-13\. Grimm SL, Kaufman JT, Rice DP, Whittaker C, Bradshaw WJ, McLaren MR. Inferring the sensitivity of wastewater metagenomic sequencing for pathogen early detection \[Internet\]. bioRxiv. 2023. 
+13\. Grimm SL, Kaufman JT, Rice DP, Whittaker C, Bradshaw WJ, McLaren MR. Inferring the sensitivity of wastewater metagenomic sequencing for pathogen early detection \[Internet\]. bioRxiv. 2023. https://doi.org/10.1101/2023.12.22.23300450
 
-14\. Castillo DJ, Rifkin RF, Cowan DA, Potgieter M. The Healthy Human Blood Microbiome: Fact or Fiction? Front Cell Infect Microbiol \[Internet\]. 2019;9. 
+14\. Castillo DJ, Rifkin RF, Cowan DA, Potgieter M. The Healthy Human Blood Microbiome: Fact or Fiction? Front Cell Infect Microbiol \[Internet\]. 2019;9. https://doi.org/10.3389/fcimb.2019.00148
 
-15\. Spandole S, Cimponeriu D, Berca LM, Mihăescu G. Human anelloviruses: an update of molecular, epidemiological and clinical aspects. Arch Virol \[Internet\]. 2015 Apr 15 \[cited 2025 Jan 8\];160(4):893–908. 
+15\. Spandole S, Cimponeriu D, Berca LM, Mihăescu G. Human anelloviruses: an update of molecular, epidemiological and clinical aspects. Arch Virol \[Internet\]. 2015 Apr 15 \[cited 2025 Jan 8\];160(4):893–908. https://doi.org/10.1007/s00705-015-2363-9
 
-16\. Sabbaghian M, Gheitasi H, Shekarchi AA, Tavakoli A, Poortahmasebi V. The mysterious anelloviruses: investigating its role in human diseases. BMC Microbiol \[Internet\]. 2024 Jan 29 \[cited 2025 Jan 8\];24(1):40. 
+16\. Sabbaghian M, Gheitasi H, Shekarchi AA, Tavakoli A, Poortahmasebi V. The mysterious anelloviruses: investigating its role in human diseases. BMC Microbiol \[Internet\]. 2024 Jan 29 \[cited 2025 Jan 8\];24(1):40. https://doi.org/10.1186/s12866-024-03187-7
 
-17\. Timmerman AL, Schönert ALM, van der Hoek L. Anelloviruses versus human immunity: how do we control these viruses? FEMS Microbiol Rev \[Internet\]. 2024 Jan 12 \[cited 2025 Jan 8\];48(1):fuae005. 
+17\. Timmerman AL, Schönert ALM, van der Hoek L. Anelloviruses versus human immunity: how do we control these viruses? FEMS Microbiol Rev \[Internet\]. 2024 Jan 12 \[cited 2025 Jan 8\];48(1):fuae005. https://doi.org/10.1093/femsre/fuae005
 
-18\. Dunmire SK, Verghese PS, Balfour HH Jr. Primary Epstein-Barr virus infection. J Clin Virol \[Internet\]. 2018 May 1 \[cited 2025 Jan 8\];102:84–92. 
+18\. Dunmire SK, Verghese PS, Balfour HH Jr. Primary Epstein-Barr virus infection. J Clin Virol \[Internet\]. 2018 May 1 \[cited 2025 Jan 8\];102:84–92. https://doi.org/10.1016/j.jcv.2018.03.001
 
-19\. Cannon MJ, Schmid DS, Hyde TB. Review of cytomegalovirus seroprevalence and demographic characteristics associated with infection: CMV seroprevalence. Rev Med Virol \[Internet\]. 2010 Jul 1 \[cited 2025 Jan 8\];20(4):202–13. 
+19\. Cannon MJ, Schmid DS, Hyde TB. Review of cytomegalovirus seroprevalence and demographic characteristics associated with infection: CMV seroprevalence. Rev Med Virol \[Internet\]. 2010 Jul 1 \[cited 2025 Jan 8\];20(4):202–13. https://doi.org/10.1002/rmv.655 
 
-20\. Bodaghi S, Wood LV, Roby G, Ryder C, Steinberg SM, Zheng ZM. Could human papillomaviruses be spread through blood? J Clin Microbiol \[Internet\]. 2005 Nov \[cited 2025 Jan 7\];43(11):5428–34. 
+20\. Bodaghi S, Wood LV, Roby G, Ryder C, Steinberg SM, Zheng ZM. Could human papillomaviruses be spread through blood? J Clin Microbiol \[Internet\]. 2005 Nov \[cited 2025 Jan 7\];43(11):5428–34. https://doi.org/10.1128/JCM.43.11.5428-5434.2005
 
-21\. Cladel NM, Jiang P, Li JJ, Peng X, Cooper TK, Majerciak V, et al. Papillomavirus can be transmitted through the blood and produce infections in blood recipients: Evidence from two animal models. Emerg Microbes Infect \[Internet\]. 2019 Jul 25 \[cited 2025 Jan 7\];8(1):1108–21. 
+21\. Cladel NM, Jiang P, Li JJ, Peng X, Cooper TK, Majerciak V, et al. Papillomavirus can be transmitted through the blood and produce infections in blood recipients: Evidence from two animal models. Emerg Microbes Infect \[Internet\]. 2019 Jul 25 \[cited 2025 Jan 7\];8(1):1108–21. https://doi.org/10.1080/22221751.2019.1637072
 
-22\. Boothpur R, Brennan DC. Human polyoma viruses and disease with emphasis on clinical BK and JC. J Clin Virol \[Internet\]. 2010 Apr 8 \[cited 2025 Jan 7\];47(4):306–12. 
+22\. Boothpur R, Brennan DC. Human polyoma viruses and disease with emphasis on clinical BK and JC. J Clin Virol \[Internet\]. 2010 Apr 8 \[cited 2025 Jan 7\];47(4):306–12. https://doi.org/10.1016/j.jcv.2009.12.006
 
-23\. De Gascun CF, Carr MJ. Human polyomavirus reactivation: disease pathogenesis and treatment approaches. Clin Dev Immunol \[Internet\]. 2013 May 2 \[cited 2025 Jan 7\];2013:373579. 
+23\. De Gascun CF, Carr MJ. Human polyomavirus reactivation: disease pathogenesis and treatment approaches. Clin Dev Immunol \[Internet\]. 2013 May 2 \[cited 2025 Jan 7\];2013:373579. https://doi.org/10.1155/2013/373579
 
-24\. Yang N, Dai R, Zhang X. Global prevalence of human pegivirus-1 in healthy volunteer blood donors: a systematic review and meta-analysis. Vox Sang \[Internet\]. 2020 Apr 1 \[cited 2025 Jan 8\];115(3):107–19. 
+24\. Yang N, Dai R, Zhang X. Global prevalence of human pegivirus-1 in healthy volunteer blood donors: a systematic review and meta-analysis. Vox Sang \[Internet\]. 2020 Apr 1 \[cited 2025 Jan 8\];115(3):107–19. https://doi.org/10.1111/vox.12876
 
-25\. Hayden RT, Wolk DM, Carroll KC, Tang YW. Adenovirus. In: Diagnostic Microbiology of the Immunocompromised Host, Second Edition \[Internet\]. American Society of Microbiology; 2016 \[cited 2025 Jan 9\]. p. 217–32. 
+25\. Hayden RT, Wolk DM, Carroll KC, Tang YW. Adenovirus. In: Diagnostic Microbiology of the Immunocompromised Host, Second Edition \[Internet\]. American Society of Microbiology; 2016 \[cited 2025 Jan 9\]. p. 217–32. https://doi.org/10.1128/microbiolspec.dmih2-0020-2015
 
-26\. Cohen JI. Herpesvirus latency. J Clin Invest \[Internet\]. 2020 Jul 1 \[cited 2025 Jan 6\];130(7):3361–9. 
+26\. Cohen JI. Herpesvirus latency. J Clin Invest \[Internet\]. 2020 Jul 1 \[cited 2025 Jan 6\];130(7):3361–9. https://doi.org/10.1172/JCI136225
 
-27\. Griffiths P, Reeves M. Pathogenesis of human cytomegalovirus in the immunocompromised host. Nat Rev Microbiol \[Internet\]. 2021 Dec 24 \[cited 2024 Jul 2\];19(12):759–73. 
-
-28\. Grimm SL, Kaufman JT, Rice DP, Whittaker C, Bradshaw WJ, McLaren MR. Inferring the sensitivity of wastewater metagenomic sequencing for pathogen early detection \[Internet\]. medRxiv; 2024 \[cited 2024 Mar 13\]. 
+27\. Griffiths P, Reeves M. Pathogenesis of human cytomegalovirus in the immunocompromised host. Nat Rev Microbiol \[Internet\]. 2021 Dec 24 \[cited 2024 Jul 2\];19(12):759–73. https://doi.org/10.1038/s41579-021-00582-z
 
 # Appendix 1: Dataset descriptions {#appendix-1:-dataset-descriptions}
 
