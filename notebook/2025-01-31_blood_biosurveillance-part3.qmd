@@ -4,7 +4,7 @@ author:
   - Harmon Bhasin
   - Michael McLaren
   - Lennart Justen
-date: 2025-02-03
+date: 2025-02-05
 toc: true
 format:
  html:
@@ -63,16 +63,15 @@ These differences in sample preparation, donor population, and sequencing approa
 
 We processed all datasets through a modified version of the viral metagenomic sequencing pipeline ([v2.2.1](https://github.com/harmonbhasin/mgs-workflow)) described in Grimm et al. (13). To reduce computational requirements, we simplified the adapter trimming steps by using only FASTP rather than the original combination of FASTP, Cutadapt, and Trimmomatic. 
 
-The pipeline consists of two workflows: the taxonomic profiling workflow and the viral identification workflow. The taxonomic profiling workflow uses Kraken2 to assign reads to the least common ancestor (based on NCBI taxonomy) of matched genomes in the Kraken2 Standard database, which includes RefSeq prokaryotic, viral, and vector genomes along with the human genome. Results from this workflow determine the kingdom-level composition shown in Table 1. Since the database lacks non-human eukaryotic reference genomes, reads from such organisms are expected to remain unassigned.
+The pipeline consists of two workflows: the taxonomic profiling workflow and the viral identification workflow. The taxonomic profiling workflow uses Kraken2 to assign reads to the least common ancestor (based on NCBI taxonomy) of matched genomes in the Kraken2 Standard database, which includes RefSeq prokaryotic, viral, and vector genomes along with the human genome. Results from this workflow determine the kingdom-level composition shown in Table 1\. Since the database lacks non-human eukaryotic reference genomes, reads from such organisms are expected to remain unassigned.
 
-The viral-identification workflow maps reads with Kraken2 (also with the Standard database) and aligns reads using Bowtie2 to an expanded database of human-infecting virus genomes from GenBank, reporting putative human-infecting virus reads based on the condition that the read aligns by Bowtie2 to a human virus and is not mapped by Kraken2 to a taxon that is not a human virus. We use the Bowtie2 assignment for the final taxonomic assignment.[^3]
+The viral-identification workflow maps reads with Kraken2 (also with the Standard database) and aligns reads using Bowtie2 to an expanded database of human-infecting virus genomes from GenBank. We modify the pipeline’s HV assignment criteria, excluding any read that is not assigned to a human-infecting virus genome by raken2. Excluding reads unclassified by Kraken2 reduces the number of putative HV assignments by about a factor of three.[^3]
 
-We applied additional filtering to taxonomic assignments in our downstream analysis. First, we removed reads from the Cebrià-Mendoza et al. (3) dataset that Kraken2 assigned to *Microviridae* or *Rhabdoviridae* families, which originated from Phi-X and Vesicular Stomatitis Virus spike-in controls. Second, we removed SARS-CoV-2 reads from the Thijssen et al. (4) and Mengyi et al. (5), as these were likely laboratory contaminants given that samples were collected before the COVID-19 pandemic (2012-2018).
+As a post-processing step after running the standard pipeline, we applied additional study-specific filtering to remove known contaminants. We removed reads from the Cebrià-Mendoza et al. (3) dataset that Kraken2 assigned to *Microviridae* or *Rhabdoviridae* families, which originated from Phi-X and Vesicular Stomatitis Virus spike-in controls. We also removed SARS-CoV-2 reads from the Thijssen et al. (4) and Mengyi et al. (5) datasets, as these were likely laboratory contaminants given that samples were collected before the COVID-19 pandemic (2012-2018).
 
 Complete analysis code and documentation are available in our public GitHub [repository](https://github.com/naobservatory/blood-blog-post-3).
 
-[^3]:  Removing reads that were unclassified by Kraken2 reduces putative HV reads by around a factor of 3, with a larger effect on plasma studies (particularly that of Mengyi et al. (5)). This drop-off may indicate a large presence of human viruses that are not represented in RefSeq and are thereby left out of our analysis. Characterization of these reads is a fruitful area for future analysis.
-
+[^3]:  Removing reads that were unclassified by Kraken2 reduces putative HV reads, with a larger effect on plasma studies, particularly that of Mengyi et al. (5). This drop-off may indicate a large presence of human viruses that are not represented in RefSeq and are thereby left out of our analysis. Characterization of these reads is a fruitful area for future analysis.
 # Kingdom-level composition
 
 | Sample type | Dataset | Unassigned | Human | Bacterial | Archaeal† | Viral |
