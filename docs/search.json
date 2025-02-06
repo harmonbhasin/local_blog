@@ -1,16 +1,16 @@
 [
   {
-    "objectID": "notebook/2025-01-31_blood_biosurveillance-part3.html",
-    "href": "notebook/2025-01-31_blood_biosurveillance-part3.html",
+    "objectID": "notebook/2025-02-04_blood_biosurveillance-part3.html",
+    "href": "notebook/2025-02-04_blood_biosurveillance-part3.html",
     "title": "Exploring Blood-Based Biosurveillance, Part 3: The Blood Virome",
     "section": "",
     "text": "This is the third post in a series of blogs exploring blood-based biosurveillance for novel pathogen detection as part of the NAO’s effort to evaluate different biosurveillance approaches. We once again thank our colleagues at the NAO, particularly Jeff Kaufman and Will Bradshaw, for their valuable feedback."
   },
   {
-    "objectID": "notebook/2025-01-31_blood_biosurveillance-part3.html#footnotes",
-    "href": "notebook/2025-01-31_blood_biosurveillance-part3.html#footnotes",
+    "objectID": "notebook/2025-02-04_blood_biosurveillance-part3.html#footnotes",
+    "href": "notebook/2025-02-04_blood_biosurveillance-part3.html#footnotes",
     "title": "Exploring Blood-Based Biosurveillance, Part 3: The Blood Virome",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nIn this context, “healthy” refers to individuals without severe medical conditions or symptoms recruited for studies as “healthy” controls. Such individuals may still harbor asymptomatic viral infections, which are common in the general population.↩︎\nWhile we originally set out to collect data from only healthy donors, it became clear that finding datasets was going to be harder than we expected, so we decided to include data from additional donors, even if they were symptomatic.↩︎\nRemoving reads that were unclassified by Kraken2 reduces putative HV reads, with a larger effect on plasma studies, particularly that of Mengyi et al. (5). This drop-off may indicate a large presence of human viruses that are not represented in RefSeq and are thereby left out of our analysis. Characterization of these reads is a fruitful area for future analysis. # Kingdom-level composition↩︎\nWhile the absence of Orthoherpesviridae likely reflects methodological differences given their high prevalence in human populations, the absence of Retroviridae could simply reflect differences in donor populations, as retroviruses are less prevalent.↩︎"
+    "text": "Footnotes\n\n\nIn this context, “healthy” refers to individuals without severe medical conditions or symptoms recruited for studies as “healthy” controls. Such individuals may still harbor asymptomatic viral infections, which are common in the general population.↩︎\nWhile we originally set out to collect data from only healthy donors, it became clear that finding datasets was going to be harder than we expected, so we decided to include data from additional donors, even if they were symptomatic.↩︎\nRemoving reads that were unclassified by Kraken2 reduces putative HV reads, with a larger effect on plasma studies, particularly that of Mengyi et al. (5). This drop-off may indicate a large presence of human viruses that are not represented in RefSeq and are thereby left out of our analysis. Characterization of these reads is a fruitful area for future analysis.↩︎\nWhile the absence of Orthoherpesviridae likely reflects methodological differences given their high prevalence in human populations, the absence of Retroviridae could simply reflect differences in donor populations, as retroviruses are less prevalent.↩︎"
   }
 ]
